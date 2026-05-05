@@ -188,18 +188,18 @@
       <!-- Contact Form -->
       <div class="contact-wrapper reveal">
         <h3>Contact Form</h3>
-        <form id="contactForm" onsubmit="handleSubmit(event)">
+        <form id="contactForm">
           <div class="form-group">
             <label for="name">Your Name</label>
-            <input type="text" id="name" placeholder="Enter your name" required />
+            <input type="text" id="name" name="from_name" placeholder="Enter your name" required />
           </div>
           <div class="form-group">
             <label for="email">E-Mail</label>
-            <input type="email" id="email" placeholder="yourmail@email.com" required />
+            <input type="email" id="email" name="reply_to" placeholder="yourmail@email.com" required />
           </div>
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" placeholder="Enter your message." required></textarea>
+            <textarea id="message" name="message" placeholder="Enter your message." required></textarea>
           </div>
           <button type="submit" class="btn-primary">Send</button>
         </form>
@@ -213,8 +213,21 @@
     <p>&copy; 2026 PoodlePath. All rights reserved.</p>
   </footer>
 
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
   <!-- ===== Script ===== -->
   <script>
+    // ========================================
+    // EmailJS SETUP - Replace these 3 values:
+    // ========================================
+    const EMAILJS_PUBLIC_KEY = 'rYoJkOTH6WSQ32AaW';
+    const EMAILJS_SERVICE_ID = 'service_21bv2ap';
+    const EMAILJS_TEMPLATE_ID = 'template_5yy07rh';
+
+    // Initialize EmailJS
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+
     // Mobile menu toggle
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('navLinks');
@@ -250,18 +263,36 @@
     }, { threshold: 0.15 });
     revealEls.forEach(el => observer.observe(el));
 
-    // Form submit
-    function handleSubmit(e) {
+    // Contact form submit with EmailJS
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
-      const btn = e.target.querySelector('button');
-      btn.textContent = '✓ Sent!';
-      btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
-      setTimeout(() => {
-        btn.textContent = 'Gönder';
-        btn.style.background = '';
-        e.target.reset();
-      }, 2500);
-    }
+      const btn = this.querySelector('button');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+
+      emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, this)
+        .then(() => {
+          btn.textContent = '✓ Sent!';
+          btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+          this.reset();
+          setTimeout(() => {
+            btn.textContent = 'Send';
+            btn.style.background = '';
+            btn.disabled = false;
+          }, 3000);
+        })
+        .catch((error) => {
+          btn.textContent = '✗ Error, try again';
+          btn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+          console.error('EmailJS error:', error);
+          setTimeout(() => {
+            btn.textContent = 'Send';
+            btn.style.background = '';
+            btn.disabled = false;
+          }, 3000);
+        });
+    });
   </script>
 
 </body>
