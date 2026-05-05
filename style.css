@@ -164,10 +164,12 @@ section { position:relative; z-index:1; padding:120px 24px; }
 
 /* ===== Download ===== */
 .download-grid {
-  display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:24px;
+  display:flex; flex-wrap:wrap; gap:24px;
+  justify-content:center;
 }
 .download-card {
+  flex:0 1 calc(33.333% - 16px);
+  min-width:240px;
   background:var(--glass-bg); border:1px solid var(--glass-border);
   border-radius:20px; padding:40px 32px; text-align:center;
   transition:var(--transition); position:relative; overflow:hidden;
@@ -288,3 +290,4 @@ footer .logo {
   .hero-icon { inset:40px; font-size:2.8rem; }
   .contact-wrapper { padding:28px 20px; }
 }
+
