@@ -1,29 +1,240 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <title>Benim Sitem</title>
-  <style>
-    body {
-      font-family: Arial;
-      text-align: center;
-      background: #111;
-      color: white;
-    }
-    button {
-      padding: 10px 20px;
-      border: none;
-      background: purple;
-      color: white;
-      cursor: pointer;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PoodlePath - Dijital yolculuğunuzda güvenilir çözüm ortağınız. Hemen keşfedin!" />
+  <title>PoodlePath — Dijital Çözüm Ortağınız</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<h1>Hoş Geldin 🔥</h1>
-<p>Bu benim ilk GitHub sitem</p>
-<button>İletişim</button>
+  <!-- Background Glow -->
+  <div class="bg-glow"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#hero" class="logo">Poodle<span>Path</span></a>
+      <div class="nav-links" id="navLinks">
+        <a href="#hero" class="active">Anasayfa</a>
+        <a href="#download">İndir</a>
+        <a href="#why-us">Neden Biz?</a>
+        <a href="#contact">İletişim</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menü">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== Hero ===== -->
+  <section id="hero">
+    <div class="section-container">
+      <div class="hero-visual">
+        <div class="ring"><div class="ring-dot"></div></div>
+        <div class="ring"><div class="ring-dot"></div></div>
+        <div class="ring"><div class="ring-dot"></div></div>
+        <div class="hero-icon">🐩</div>
+      </div>
+
+      <div class="section-badge">✦ Yeni Nesil Çözüm</div>
+      <h1 class="section-title">
+        Dijital Yolculuğunuzda<br /><span class="highlight">PoodlePath</span> Yanınızda
+      </h1>
+      <p class="section-desc">
+        Modern teknoloji ile güçlendirilmiş araçlarımızla projelerinizi bir üst seviyeye taşıyın.
+        Hız, güvenlik ve kullanım kolaylığı bir arada.
+      </p>
+      <div class="hero-buttons">
+        <a href="#download" class="btn-primary">Hemen İndir</a>
+        <a href="#why-us" class="btn-secondary">Daha Fazla Bilgi</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Download ===== -->
+  <section id="download">
+    <div class="section-container">
+      <div class="section-badge">⬇ İndirmeler</div>
+      <h2 class="section-title">Platformunuza Uygun <span class="highlight">İndirin</span></h2>
+      <p class="section-desc">PoodlePath tüm popüler platformlarda kullanıma hazır. Hemen indirin ve başlayın.</p>
+
+      <div class="download-grid">
+        <!-- Windows -->
+        <div class="download-card reveal">
+          <div class="icon">🪟</div>
+          <h3>Windows</h3>
+          <p>Windows 10 ve üzeri desteklenir. Kurulumu saniyeler içinde tamamlayın.</p>
+          <a href="#" class="btn-primary">Windows İndir</a>
+        </div>
+        <!-- macOS -->
+        <div class="download-card reveal">
+          <div class="icon">🍎</div>
+          <h3>macOS</h3>
+          <p>macOS Monterey ve üzeri ile tam uyumlu. Apple Silicon desteği dahil.</p>
+          <a href="#" class="btn-primary">macOS İndir</a>
+        </div>
+        <!-- Linux -->
+        <div class="download-card reveal">
+          <div class="icon">🐧</div>
+          <h3>Linux</h3>
+          <p>Ubuntu, Fedora ve Arch tabanlı dağıtımlarla uyumludur.</p>
+          <a href="#" class="btn-primary">Linux İndir</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Why Us ===== -->
+  <section id="why-us">
+    <div class="section-container">
+      <div class="section-badge">🏆 Avantajlar</div>
+      <h2 class="section-title">Neden <span class="highlight">PoodlePath</span>?</h2>
+      <p class="section-desc">Binlerce kullanıcının tercih ettiği PoodlePath ile farkı yaşayın.</p>
+
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <div class="icon-wrap">⚡</div>
+          <h3>Işık Hızında Performans</h3>
+          <p>Optimize edilmiş altyapımız sayesinde işlemleriniz milisaniyeler içinde tamamlanır.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="icon-wrap">🔒</div>
+          <h3>Üst Düzey Güvenlik</h3>
+          <p>Uçtan uca şifreleme ve gelişmiş güvenlik protokolleri ile verileriniz her zaman güvende.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="icon-wrap">🎨</div>
+          <h3>Modern Arayüz</h3>
+          <p>Kullanıcı dostu ve şık tasarımımız ile işlerinizi keyifle halledin.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="icon-wrap">🌍</div>
+          <h3>Çoklu Platform</h3>
+          <p>Windows, macOS ve Linux üzerinde sorunsuz çalışır. Cihaz değiştirin, deneyim aynı kalsın.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="icon-wrap">🔄</div>
+          <h3>Otomatik Güncellemeler</h3>
+          <p>Yeni özellikler ve iyileştirmeler otomatik olarak size ulaşır.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="icon-wrap">💬</div>
+          <h3>7/24 Destek</h3>
+          <p>Uzman ekibimiz her an yanınızda. Sorularınız anında cevaplanır.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section id="contact">
+    <div class="section-container">
+      <div class="section-badge">📬 İletişim</div>
+      <h2 class="section-title">Ekibimizle <span class="highlight">Tanışın</span></h2>
+      <p class="section-desc">Sorularınız için bize ulaşın, ekibimiz size yardımcı olmaktan mutluluk duyar.</p>
+
+      <!-- Team Cards -->
+      <div class="team-grid">
+        <div class="team-card reveal">
+          <div class="team-avatar">K</div>
+          <h3>Kurucu</h3>
+          <div class="role">CEO & Founder</div>
+          <p>Vizyoner liderlik ile PoodlePath'i geleceğe taşıyor.</p>
+        </div>
+        <div class="team-card reveal">
+          <div class="team-avatar">G</div>
+          <h3>Geliştirici</h3>
+          <div class="role">Lead Developer</div>
+          <p>Teknik mükemmellik ile ürünü şekillendiriyor.</p>
+        </div>
+        <div class="team-card reveal">
+          <div class="team-avatar">T</div>
+          <h3>Tasarımcı</h3>
+          <div class="role">UI/UX Designer</div>
+          <p>Kullanıcı deneyimini kusursuz hale getiriyor.</p>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-wrapper reveal">
+        <h3>Bize Mesaj Gönderin</h3>
+        <form id="contactForm" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <label for="name">Adınız</label>
+            <input type="text" id="name" placeholder="Adınızı girin" required />
+          </div>
+          <div class="form-group">
+            <label for="email">E-posta</label>
+            <input type="email" id="email" placeholder="ornek@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Mesajınız</label>
+            <textarea id="message" placeholder="Mesajınızı yazın..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Gönder</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="logo">PoodlePath</div>
+    <p>&copy; 2026 PoodlePath. Tüm hakları saklıdır.</p>
+  </footer>
+
+  <!-- ===== Script ===== -->
+  <script>
+    // Mobile menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      hamburger.classList.toggle('active');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        hamburger.classList.remove('active');
+      });
+    });
+
+    // Active link on scroll
+    const sections = document.querySelectorAll('section');
+    const navItems = document.querySelectorAll('.nav-links a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(sec => {
+        if (window.scrollY >= sec.offsetTop - 200) current = sec.getAttribute('id');
+      });
+      navItems.forEach(a => {
+        a.classList.remove('active');
+        if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+      });
+    });
+
+    // Reveal on scroll
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.15 });
+    revealEls.forEach(el => observer.observe(el));
+
+    // Form submit
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('button');
+      btn.textContent = '✓ Gönderildi!';
+      btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+      setTimeout(() => {
+        btn.textContent = 'Gönder';
+        btn.style.background = '';
+        e.target.reset();
+      }, 2500);
+    }
+  </script>
 
 </body>
 </html>
